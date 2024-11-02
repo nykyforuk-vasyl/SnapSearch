@@ -1,7 +1,22 @@
 import ImageCard from "../ImageCard/ImageCard";
 import s from "./ImageGallery.module.css";
 
-const ImageGallery = ({ galleryList, openModalFu }) => {
+type GalleryItem = {
+  id: string;
+  likes: number;
+  alt_description: string;
+  urls: {
+    regular: string;
+    small: string;
+  };
+};
+
+type Props = {
+  galleryList: GalleryItem[];
+  openModalFu: (imgURL: string) => void;
+};
+
+const ImageGallery = ({ galleryList, openModalFu }: Props) => {
   return (
     <>
       <ul className={s.galleryList}>

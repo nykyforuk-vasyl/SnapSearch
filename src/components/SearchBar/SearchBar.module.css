@@ -1,37 +1,56 @@
 .header {
-    background-color: #000000;
+    border-radius: 40px;
+    background-color: rgb(100, 162, 189);
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(25, 24, 31, 0.4);
+    box-shadow: 3px 5px 4px rgba(8, 8, 8, 0.4);
     margin-bottom: 36px;
+    /* outline: 3px solid rgb(255, 255, 255); */
 }
 
 .form {}
 
 .input {
     padding: 10px 16px 10px 16px;
-    border-radius: 6px;
+    border-radius: 30px;
     border: none;
-    outline: none;
-    width: 350px;
-    font-size: 14px;
-    box-shadow: 0 2px 4px rgba(54, 54, 54, 0.1);
-    background-color: #474747;
-    color: #ffffff;
+    outline: 2px solid rgb(255, 255, 255);
+    /* outline: none; */
+    width: 460px;
+    font-size: 16px;
+    font-weight: 400px;
+    letter-spacing: 1.2px;
+    box-shadow: 3px 5px 4px rgba(8, 8, 8, 0.4);
+    background-color: rgb(209, 232, 247);
+    color: rgb(46, 105, 131);
+}
+
+.input:hover {
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+.input::placeholder {
+    color: rgb(46, 105, 131);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1.2px;
 }
 
 .button {
-    margin-left: 12px;
-    font-size: 14px;
-    padding: 10px 20px;
+    margin-left: 18px;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    outline: 2px solid rgb(255, 255, 255);
+    box-shadow: 3px 5px 4px rgba(8, 8, 8, 0.4);
+    padding: 10px 18px;
     border: none;
     border-radius: 30px;
-    background-color: #474747;
-    color: #ffffff;
+    background-color: rgb(209, 232, 247);
+    color: rgb(46, 105, 131);
 }
 
 .button:hover {
-    background-color: rgb(35, 35, 36);
+    outline: 1px solid rgb(255, 255, 255);
 }
