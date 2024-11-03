@@ -1,13 +1,17 @@
 import Modal from "react-modal";
 import s from "./ImageModal.module.css";
 
-type Props = {
+type ImageModalProps = {
   modalIsOpen: boolean;
   closeModal: () => void;
   currentImage: string | null;
 };
 
-const ImageModal = ({ modalIsOpen, closeModal, currentImage }: Props) => {
+const ImageModal = ({
+  modalIsOpen,
+  closeModal,
+  currentImage,
+}: ImageModalProps) => {
   if (!modalIsOpen || currentImage === null) {
     return null;
   }

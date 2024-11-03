@@ -1,6 +1,6 @@
 import s from "./ImageCard.module.css";
 
-type Props = {
+type ImageCardProps = {
   likes: number;
   smallImg: string;
   largeImg: string;
@@ -8,7 +8,13 @@ type Props = {
   openModalFu: (imgURL: string) => void;
 };
 
-const ImageCard = ({ likes, smallImg, largeImg, alt, openModalFu }: Props) => {
+const ImageCard = ({
+  likes,
+  smallImg,
+  largeImg,
+  alt,
+  openModalFu,
+}: ImageCardProps) => {
   return (
     <div className={s.cardDiv}>
       <img

@@ -11,12 +11,12 @@ type GalleryItem = {
   };
 };
 
-type Props = {
+type ImageGalleryProps = {
   galleryList: GalleryItem[];
   openModalFu: (imgURL: string) => void;
 };
 
-const ImageGallery = ({ galleryList, openModalFu }: Props) => {
+const ImageGallery = ({ galleryList, openModalFu }: ImageGalleryProps) => {
   return (
     <>
       <ul className={s.galleryList}>
