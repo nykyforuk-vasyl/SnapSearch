@@ -5,7 +5,7 @@ type ImageCardProps = {
   smallImg: string;
   largeImg: string;
   alt: string;
-  openModalFu: (imgURL: string) => void;
+  onImageClick: (imgURL: string) => void;
 };
 
 const ImageCard = ({
@@ -13,7 +13,7 @@ const ImageCard = ({
   smallImg,
   largeImg,
   alt,
-  openModalFu,
+  onImageClick,
 }: ImageCardProps) => {
   return (
     <div className={s.cardDiv}>
@@ -21,7 +21,7 @@ const ImageCard = ({
         src={smallImg}
         alt={alt}
         className={s.cardImg}
-        onClick={() => openModalFu(largeImg)}
+        onClick={() => onImageClick(largeImg)}
       />
       <span className={s.cardDesc}>
         <p className={s.cardDescItem}>Likes: {likes}</p>

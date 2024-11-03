@@ -1,13 +1,13 @@
 import s from "./LoadMoreBtn.module.css";
 
-type LoadMoreBtnProps = {
-  loadMoreFu: () => void;
-};
+interface LoadMoreBtnProps {
+  handleClick: () => void;
+}
 
-const LoadMoreBtn = ({ loadMoreFu }: LoadMoreBtnProps) => {
+const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ handleClick }) => {
   return (
     <div className={s.loadWrapper}>
-      <button className={s.loadButton} onClick={() => loadMoreFu()}>
+      <button className={s.loadButton} onClick={() => handleClick()}>
         Load more
       </button>
     </div>

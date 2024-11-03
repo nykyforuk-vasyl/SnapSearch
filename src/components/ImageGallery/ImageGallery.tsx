@@ -13,10 +13,10 @@ type GalleryItem = {
 
 type ImageGalleryProps = {
   galleryList: GalleryItem[];
-  openModalFu: (imgURL: string) => void;
+  onImageClick: (imgURL: string) => void;
 };
 
-const ImageGallery = ({ galleryList, openModalFu }: ImageGalleryProps) => {
+const ImageGallery = ({ galleryList, onImageClick }: ImageGalleryProps) => {
   return (
     <>
       <ul className={s.galleryList}>
@@ -28,7 +28,7 @@ const ImageGallery = ({ galleryList, openModalFu }: ImageGalleryProps) => {
                 smallImg={small}
                 largeImg={regular}
                 alt={alt_description}
-                openModalFu={openModalFu}
+                onImageClick={onImageClick}
               />
             </li>
           )

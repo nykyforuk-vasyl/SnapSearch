@@ -4,15 +4,15 @@ import s from "./ImageModal.module.css";
 type ImageModalProps = {
   modalIsOpen: boolean;
   closeModal: () => void;
-  currentImage: string | null;
+  selectedImage: string | null;
 };
 
 const ImageModal = ({
   modalIsOpen,
   closeModal,
-  currentImage,
+  selectedImage,
 }: ImageModalProps) => {
-  if (!modalIsOpen || currentImage === null) {
+  if (!modalIsOpen || selectedImage === null) {
     return null;
   }
 
@@ -38,7 +38,7 @@ const ImageModal = ({
           },
         }}
       >
-        <img src={currentImage} alt="Full-size" className={s.modalImage} />
+        <img src={selectedImage} alt="Full-size" className={s.modalImage} />
       </Modal>
     </>
   );
