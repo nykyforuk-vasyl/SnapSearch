@@ -1,7 +1,7 @@
 import ImageCard from "../ImageCard/ImageCard";
 import s from "./ImageGallery.module.css";
 
-type GalleryItem = {
+interface GalleryItem {
   id: string;
   likes: number;
   alt_description: string;
@@ -9,14 +9,17 @@ type GalleryItem = {
     regular: string;
     small: string;
   };
-};
+}
 
-type ImageGalleryProps = {
+interface ImageGalleryProps {
   galleryList: GalleryItem[];
   onImageClick: (imgURL: string) => void;
-};
+}
 
-const ImageGallery = ({ galleryList, onImageClick }: ImageGalleryProps) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({
+  galleryList,
+  onImageClick,
+}) => {
   return (
     <>
       <ul className={s.galleryList}>
