@@ -25,7 +25,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
   };
 
   return (
-    <>
       <header className={s.header}>
         <form onSubmit={handlerSubmit} className={s.form}>
           <input
@@ -41,7 +40,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
           </button>
         </form>
       </header>
-    </>
   );
 };
 
