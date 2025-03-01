@@ -1,13 +1,17 @@
-.header {
+.form {
     border-radius: 40px;
     background-color: rgb(100, 162, 189);
-    height: 60px;
     display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
     justify-content: center;
     box-shadow: 3px 5px 4px rgba(8, 8, 8, 0.4);
     margin-bottom: 36px;
-    /* outline: 3px solid rgb(255, 255, 255); */
 }
 
 .input {
@@ -15,8 +19,7 @@
     border-radius: 30px;
     border: none;
     outline: 2px solid rgb(255, 255, 255);
-    /* outline: none; */
-    width: 460px;
+    width: 260px;
     font-size: 16px;
     font-weight: 400px;
     letter-spacing: 1.2px;
@@ -25,8 +28,9 @@
     color: rgb(46, 105, 131);
 }
 
-.input:hover {
-    outline: 1px solid rgb(255, 255, 255);
+.input:hover,
+.input:active {
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .input::placeholder {
@@ -36,8 +40,14 @@
     letter-spacing: 1.2px;
 }
 
+@media (min-width: 820px) {
+    .input {
+        width: 460px;
+    }
+
+}
+
 .button {
-    margin-left: 18px;
     font-size: 16px;
     letter-spacing: 1.2px;
     outline: 2px solid rgb(255, 255, 255);
@@ -49,6 +59,7 @@
     color: rgb(46, 105, 131);
 }
 
-.button:hover {
-    outline: 1px solid rgb(255, 255, 255);
+.button:hover,
+.button:active {
+    border: 1px solid rgb(255, 255, 255);
 }

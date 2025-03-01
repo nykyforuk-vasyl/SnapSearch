@@ -25,21 +25,21 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
   };
 
   return (
-      <header className={s.header}>
-        <form onSubmit={handlerSubmit} className={s.form}>
-          <input
-            name="topic"
-            type="text"
-            autoComplete="off"
-            autoFocus
-            placeholder="Search images and photos"
-            className={s.input}
-          />
-          <button type="submit" className={s.button}>
-            Search
-          </button>
-        </form>
-      </header>
+    <header>
+      <form onSubmit={handlerSubmit} className={s.form}>
+        <input
+          name="topic"
+          type="text"
+          autoComplete="off"
+          autoFocus
+          placeholder="Search images and photos"
+          className={s.input}
+        />
+        <button type="submit" className={s.button}>
+          Search
+        </button>
+      </form>
+    </header>
   );
 };
 
